@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Sorting Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Colour Sorting Game</h1>
+            <div class="stats">
+                <div class="stat">
+                    <span class="label">Score:</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Moves:</span>
+                    <span class="value" id="moves">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Level:</span>
+                    <span class="value" id="level">1</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-board" id="gameBoard"></div>
+
+        <div class="controls">
+            <button id="newGameBtn" class="btn btn-primary">New Game</button>
+            <button id="resetBtn" class="btn btn-secondary">Reset</button>
+            <select id="levelSelect" class="difficulty-select">
+                <option value="easy">Easy (4 colours)</option>
+                <option value="medium" selected>Medium (6 colours)</option>
+                <option value="hard">Hard (8 colours)</option>
+            </select>
+        </div>
+
+        <div id="gameStatus" class="game-status"></div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <ul>
+                <li>Click on a tube to select it</li>
+                <li>Click on another tube to pour the top colour</li>
+                <li>Sort all colours so each tube contains only one colour</li>
+                <li>Complete the level to advance!</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
